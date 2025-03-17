@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emp Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .form-group select {
+            padding-right: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        {{ msg }}
+        <h2>Emp Details Form</h2>
+        <form action="{% url 'emp_details_form'%}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">EmpName</label>
+                <input type="text" id="EmpName" name="EmpName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">EmpCity</label>
+                <input type="text" id="EmpCity" name="EmpCity" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">EmpCompany</label>
+                <input type="text" id="EmpCompany" name="EmpCompany">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+            <div class="form-group">
+                <button type="submit"><a href="{% url 'emp_details_url'  %}">Emp Details</a></button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

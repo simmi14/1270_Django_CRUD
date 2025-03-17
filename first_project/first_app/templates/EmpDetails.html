@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<center><h2>Emp Details Table</h2></center>
+
+<table>
+  <tr>
+    <th>Emp id</th>
+    <th>Emp name</th>
+    <th>Emp city</th>
+    <th>Emp company</th>
+    <th>Action</th>
+  </tr>
+<!--  <tr>-->
+<!--    <td>{{ single_data.emp_name }}</td>-->
+<!--    <td>{{ single_data.emp_city }}</td>-->
+<!--    <td>{{ single_data.emp_company }}</td>-->
+<!--  </tr>-->
+  {% for single_data in details %}
+  <tr>
+    <td>{{ single_data.id }}</td>
+    <td>{{ single_data.emp_name }}</td>
+    <td>{{ single_data.emp_city }}</td>
+    <td>{{ single_data.emp_company }}</td>
+    <td>
+      <button type="Delete"><a href="{% url 'delete_empdetail_url' single_data.id %}">Delete Data</a></button>
+      <button type="Update"><a href="{% url 'update_emp_details_url' single_data.id %}">Update Data</a></button>
+    </td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+[
+  {
+    "model": "first_app.EmpDetails",
+    "pk": 1,
+    "fields": {
+      "emp_name": "TTT",
+      "emp_city": "Pune",
+      "emp_company": "Amazon"
+    }
+  },
+  {
+    "model": "first_app.EmpDetails",
+    "pk": 2,
+    "fields": {
+      "emp_name": "PPP",
+      "emp_city": "Pune",
+      "emp_company": "Amazon"
+    }
+  },
+    {
+    "model": "first_app.EmpDetails",
+    "pk": 3,
+    "fields": {
+      "emp_name": "YYY",
+      "emp_city": "Pune",
+      "emp_company": "Amazon"
+    }
+  },
+    {
+    "model": "first_app.EmpDetails",
+    "pk": 4,
+    "fields": {
+      "emp_name": "GGG",
+      "emp_city": "Pune",
+      "emp_company": "Amazon"
+    }
+  }
+]
